@@ -1,1 +1,366 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Fest 2026</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #061b16;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+            position: absolute;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+                radial-gradient(circle at center, #145c43 0%, #061b16 65%);
+            
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Islamic Pattern */
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 2px solid rgba(212, 175, 55, 0.12);
+            transform: rotate(45deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .bismillah {
+            font-size: 25px;
+            color: #d4af37;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 100px);
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
+
+        .hero h2 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 17px;
+            color: #c9d8d2;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 30px;
+            background: #d4af37;
+            color: #061b16;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* MOSQUE */
+
+        .mosque {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 180px;
+            background: #020b08;
+            clip-path: polygon(
+                0 100%,
+                0 70%,
+                10% 70%,
+                10% 50%,
+                15% 50%,
+                20% 70%,
+                25% 70%,
+                30% 45%,
+                35% 70%,
+                40% 70%,
+                45% 50%,
+                50% 70%,
+                55% 70%,
+                60% 45%,
+                65% 70%,
+                70% 70%,
+                75% 50%,
+                80% 70%,
+                85% 70%,
+                90% 50%,
+                95% 70%,
+                100% 70%,
+                100% 100%
+            );
+        }
+
+        /* ABOUT */
+
+        .section {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 700px;
+            margin: auto;
+            color: #b8c9c1;
+            line-height: 1.8;
+        }
+
+        /* CARDS */
+
+        .cards {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 35px 20px;
+            background: #0b2b23;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+        }
+
+        .card span {
+            font-size: 45px;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            color: #d4af37;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #020b08;
+            color: #84958e;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 70px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="logo">✦ FEST 2026</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="bismillah">
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+            </div>
+
+            <h1>FEST 2026</h1>
+
+            <h2>THE SPIRIT OF EXCELLENCE</h2>
+
+            <p>
+                A celebration of knowledge, creativity,
+                culture and brotherhood.
+            </p>
+
+            <a href="#" class="btn">
+                EXPLORE FEST →
+            </a>
+
+        </div>
+
+        <div class="mosque"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <h2>Welcome</h2>
+
+        <p>
+            Welcome to our college fest — a gathering where
+            talent meets creativity, knowledge meets passion,
+            and memories are created together.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>🕌</span>
+                <h3>Culture</h3>
+                <p>
+                    Experience the beauty of tradition,
+                    culture and unity.
+                </p>
+            </div>
+
+            <div class="card">
+                <span>🏆</span>
+                <h3>Competitions</h3>
+                <p>
+                    Challenge yourself and showcase
+                    your talent.
+                </p>
+            </div>
+
+            <div class="card">
+                <span>✨</span>
+                <h3>Memories</h3>
+                <p>
+                    Create unforgettable moments
+                    with your friends.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 College Fest • Made with ❤️
+    </footer>
+
+</body>
+</html>
