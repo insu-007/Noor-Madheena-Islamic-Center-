@@ -43,22 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'BADR WARRIORS', category: 'General Category', points: 342, badge: 'rank-1' },
-        { rank: 2, name: 'NOOR FALCONS', category: 'General Category', points: 315, badge: 'rank-2' },
-        { rank: 3, name: 'MINAR KNIGHTS', category: 'General Category', points: 298, badge: 'rank-3' },
-        { rank: 4, name: 'AL HUDA STRIKERS', category: 'General Category', points: 265, badge: 'rank-other' }
+        { rank: 1, name: 'INSAFIYYA', category: 'General Category', points: 0, badge: 'rank-1' },
+        { rank: 2, name: 'JAZEELLIYYA', category: 'General Category', points: 0, badge: 'rank-2' },
     ];
 
     const offStagePrograms = [
         {
             id: 101,
-            title: 'Calligraphy (Arabic)',
+            title: 'Qiraath',
             category: 'Senior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Muhammed Sinan', chestNo: '104', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Ameen Farhan', chestNo: '208', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Rashid Ahmed', chestNo: '312', team: 'Minar Knights', grade: 'B' }
+                { place: '1st', name: 'Muhammed', chestNo: '000', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '000', team: 'Noor Falcons', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '000', team: 'Minar Knights', grade: 'A' }
             ]
         },
         {
@@ -67,9 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Junior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Zayan Ali', chestNo: '115', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Bilal Hussain', chestNo: '221', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Fadil K.V.', chestNo: '304', team: 'Al Huda Strikers', grade: 'A' }
+                { place: '1st', name: 'Muhammed', chestNo: '115', team: 'Noor Falcons', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '221', team: 'Badr Warriors', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '304', team: 'Al Huda Strikers', grade: 'A' }
             ]
         },
         {
@@ -78,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'General',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Ibrahim Khalil', chestNo: '102', team: 'Minar Knights', grade: 'A' },
-                { place: '2nd', name: 'Suhail Tariq', chestNo: '189', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Nabil Mansoor', chestNo: '254', team: 'Noor Falcons', grade: 'B' }
+                { place: '1st', name: 'Muhammed', chestNo: '102', team: 'Minar Knights', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '189', team: 'Badr Warriors', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '254', team: 'Noor Falcons', grade: 'B' }
             ]
         },
         {
@@ -89,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Sub-Junior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Rayan Muhammed', chestNo: '142', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Nafih Abdullah', chestNo: '111', team: 'Al Huda Strikers', grade: 'A' },
-                { place: '3rd', name: 'Adil Shareef', chestNo: '203', team: 'Minar Knights', grade: 'B' }
+                { place: '1st', name: 'Muhammed', chestNo: '142', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '111', team: 'Al Huda Strikers', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '203', team: 'Minar Knights', grade: 'B' }
             ]
         },
         {
@@ -100,9 +98,20 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Senior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Team Badr', chestNo: '101', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Team Noor', chestNo: '202', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Team Minar', chestNo: '303', team: 'Minar Knights', grade: 'A' }
+                { place: '1st', name: 'Muhammed', chestNo: '101', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '202', team: 'Noor Falcons', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '303', team: 'Minar Knights', grade: 'A' }
+            ]
+        },
+        {
+            id: 106,
+            title: 'Loding',
+            category: 'Senior',
+            status: 'Published',
+            winners: [
+                { place: '1st', name: 'Muhammed', chestNo: '101', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '202', team: 'Noor Falcons', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '303', team: 'Minar Knights', grade: 'A' }
             ]
         }
     ];
@@ -114,9 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Senior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Hafiz Swalih', chestNo: '108', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Muhammed Rizwan', chestNo: '215', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Abdullah Omar', chestNo: '309', team: 'Minar Knights', grade: 'A' }
+                { place: '1st', name: 'Muhammed', chestNo: '108', team: 'Noor Falcons', grade: 'A' },
+                { place: '2nd', name: 'Muhammed ', chestNo: '215', team: 'Badr Warriors', grade: 'A' },
+                { place: '3rd', name: 'Muhammed ', chestNo: '309', team: 'Minar Knights', grade: 'A' }
             ]
         },
         {
@@ -125,9 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'General',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Badr Duff Team', chestNo: '501', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Noor Duff Team', chestNo: '502', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Al Huda Duff Group', chestNo: '504', team: 'Al Huda Strikers', grade: 'B' }
+                { place: '1st', name: 'Muhammed', chestNo: '501', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '502', team: 'Noor Falcons', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '504', team: 'Al Huda Strikers', grade: 'B' }
             ]
         },
         {
@@ -136,9 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Junior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Afnan Majeed', chestNo: '119', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Danish Faraz', chestNo: '228', team: 'Minar Knights', grade: 'A' },
-                { place: '3rd', name: 'Yaseen Ahmed', chestNo: '150', team: 'Noor Falcons', grade: 'B' }
+                { place: '1st', name: 'Muhammed', chestNo: '119', team: 'Badr Warriors', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '228', team: 'Minar Knights', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '150', team: 'Noor Falcons', grade: 'B' }
             ]
         },
         {
@@ -147,9 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Senior',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Shammas K.', chestNo: '133', team: 'Minar Knights', grade: 'A' },
-                { place: '2nd', name: 'Basith Hassan', chestNo: '210', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Faris Rahiman', chestNo: '177', team: 'Noor Falcons', grade: 'A' }
+                { place: '1st', name: 'Muhammed', chestNo: '133', team: 'Minar Knights', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '210', team: 'Badr Warriors', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '177', team: 'Noor Falcons', grade: 'A' }
             ]
         },
         {
@@ -158,28 +167,30 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'General',
             status: 'Published',
             winners: [
-                { place: '1st', name: 'Noor Choir', chestNo: '601', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Badr Ensemble', chestNo: '602', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Minar Voices', chestNo: '603', team: 'Minar Knights', grade: 'A' }
+                { place: '1st', name: 'Muhammed', chestNo: '601', team: 'Noor Falcons', grade: 'A' },
+                { place: '2nd', name: 'Muhammed', chestNo: '602', team: 'Badr Warriors', grade: 'A' },
+                { place: '3rd', name: 'Muhammed', chestNo: '603', team: 'Minar Knights', grade: 'A' }
             ]
         }
     ];
 
     const galleryPhotos = [
-        { title: 'Inauguration Ceremony 2026', tag: 'Stage 1', bg: 'linear-gradient(135deg, #9E0012, #E8A217)' },
-        { title: 'Duffmuttu Grand Final', tag: 'Stage 1', bg: 'linear-gradient(135deg, #1E293B, #9E0012)' },
-        { title: 'Calligraphy Competition', tag: 'Hall B', bg: 'linear-gradient(135deg, #059669, #10B981)' },
-        { title: 'Qira\'at Winners Awarding', tag: 'Stage 2', bg: 'linear-gradient(135deg, #D97706, #B45309)' },
-        { title: 'Group Song Champions', tag: 'Stage 1', bg: 'linear-gradient(135deg, #2563EB, #1E40AF)' },
-        { title: 'Score Board Celebration', tag: 'Main Arena', bg: 'linear-gradient(135deg, #9E0012, #7A000D)' }
+        { title: 'loding..............', tag: 'Stage 1', image: '' },
+        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #1E293B, #9E0012)' },
+        { title: 'loding..............', tag: 'Hall B', image: 'linear-gradient(135deg, #059669, #10B981)' },
+        { title: 'loding..............', tag: 'Stage 2', image: 'linear-gradient(135deg, #D97706, #B45309)' },
+        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #2563EB, #1E40AF)' },
+        { title: 'loding..............', tag: 'Main Arena', image: 'linear-gradient(135deg, #9E0012, #7A000D)' },
+        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #2563EB, #1E40AF)' },
+        { title: 'loding..............', tag: 'Main Arena', image: 'linear-gradient(135deg, #9E0012, #7A000D)' }
     ];
 
     const scheduleData = [
-        { time: '09:00 AM', event: 'Qira\'at Competition', stage: 'Stage 1 (Main Hall)' },
-        { time: '10:30 AM', event: 'Calligraphy & Pencil Drawing', stage: 'Off-Stage Hall A' },
-        { time: '01:30 PM', event: 'Malayalam & English Speech', stage: 'Stage 2' },
-        { time: '03:30 PM', event: 'Duffmuttu & Group Song', stage: 'Stage 1 (Main Hall)' },
-        { time: '07:00 PM', event: 'Grand Valedictory & Trophy Awarding', stage: 'Main Arena' }
+        { time: '00:00 AM', event: 'W8', stage: 'Error(Main Hall)' },
+        { time: '00:00 AM', event: 'W8', stage: 'Error' },
+        { time: '00:00 AM', event: 'W8', stage: 'Error' },
+        { time: '00:00 AM', event: 'W8', stage: 'Error(Main Hall)' },
+        { time: '00:00 AM', event: 'W8', stage: 'Error' }
     ];
 
     // --- Side Drawer Navigation Functions ---
@@ -307,11 +318,15 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryPhotos.forEach(photo => {
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
-                item.style.background = photo.bg;
                 item.innerHTML = `
-                    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:white; font-size:32px;">
-                        🖼️
-                    </div>
+                    <img
+                         src="${photo.image}"
+                         alt="${photo.title}"
+                        
+            style="width:100%; height:100%; object-
+            fit:cover;border-radius:12px;"
+                    >
+
                     <div class="gallery-caption">
                         <div style="font-weight:bold">${photo.title}</div>
                         <div style="opacity:0.8; font-size:10px">${photo.tag}</div>
