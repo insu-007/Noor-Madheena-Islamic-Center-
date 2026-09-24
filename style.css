@@ -157,12 +157,12 @@ html, body {
 
 /* Header Center Title Typography */
 .header-title {
-    position: abuolute;
-    left: 50%;
-    top: 80px;
-    transfrom: translateX(-50%)
     text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-30px, 90px);
 }
 
 .header-title h1 {
