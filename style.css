@@ -159,7 +159,7 @@ html, body {
 .header-title {
     position: abuolute;
     left: 50%;
-    top: 25px;
+    top: 80px;
     transfrom: translateX(-50%)
     text-align: center;
     width: 100%;
