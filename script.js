@@ -43,136 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'INSAFIYYA', category: 'General Category', points: 0, badge: 'rank-1' },
-        { rank: 2, name: 'JAZEELLIYYA', category: 'General Category', points: 0, badge: 'rank-2' },
+        { rank: 1, name: 'GROUP A', category: '', points: 0, badge: 'rank-1' },
+        { rank: 2, name: 'GROUP B', category: '', points: 0, badge: 'rank-2' },
     ];
 
-    const offStagePrograms = [
-        {
-            id: 101,
-            title: 'Qiraath',
-            category: 'Senior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '000', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '000', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '000', team: 'Minar Knights', grade: 'A' }
-            ]
-        },
-        {
-            id: 102,
-            title: 'Pencil Drawing',
-            category: 'Junior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '115', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '221', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '304', team: 'Al Huda Strikers', grade: 'A' }
-            ]
-        },
-        {
-            id: 103,
-            title: 'Essay Writing (English)',
-            category: 'General',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '102', team: 'Minar Knights', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '189', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '254', team: 'Noor Falcons', grade: 'B' }
-            ]
-        },
-        {
-            id: 104,
-            title: 'Water Color Painting',
-            category: 'Sub-Junior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '142', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '111', team: 'Al Huda Strikers', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '203', team: 'Minar Knights', grade: 'B' }
-            ]
-        },
-        {
-            id: 105,
-            title: 'Quiz Competition',
-            category: 'Senior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '101', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '202', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '303', team: 'Minar Knights', grade: 'A' }
-            ]
-        },
-        {
-            id: 106,
-            title: 'Loding',
-            category: 'Senior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '101', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '202', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '303', team: 'Minar Knights', grade: 'A' }
-            ]
-        }
-    ];
-
-    const onStagePrograms = [
-        {
-            id: 201,
-            title: 'Qira\'at (Quran Recitation)',
-            category: 'Senior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '108', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Muhammed ', chestNo: '215', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Muhammed ', chestNo: '309', team: 'Minar Knights', grade: 'A' }
-            ]
-        },
-        {
-            id: 202,
-            title: 'Duffmuttu Performance',
-            category: 'General',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '501', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '502', team: 'Noor Falcons', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '504', team: 'Al Huda Strikers', grade: 'B' }
-            ]
-        },
-        {
-            id: 203,
-            title: 'Malayalam Speech',
-            category: 'Junior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '119', team: 'Badr Warriors', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '228', team: 'Minar Knights', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '150', team: 'Noor Falcons', grade: 'B' }
-            ]
-        },
-        {
-            id: 204,
-            title: 'Mappilapattu (Solo)',
-            category: 'Senior',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '133', team: 'Minar Knights', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '210', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '177', team: 'Noor Falcons', grade: 'A' }
-            ]
-        },
-        {
-            id: 205,
-            title: 'Group Song (Meelad Chorus)',
-            category: 'General',
-            status: 'Published',
-            winners: [
-                { place: '1st', name: 'Muhammed', chestNo: '601', team: 'Noor Falcons', grade: 'A' },
-                { place: '2nd', name: 'Muhammed', chestNo: '602', team: 'Badr Warriors', grade: 'A' },
-                { place: '3rd', name: 'Muhammed', chestNo: '603', team: 'Minar Knights', grade: 'A' }
-            ]
-        }
-    ];
 
     const galleryPhotos = [
         { title: 'loding..............', tag: 'Stage 1', image: '' },
@@ -407,40 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal();
     });
 
-    menuLinkScoreboard.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
-        openModal('Overall Scoreboard', 'scoreboard');
-    });
-
-    menuLinkOffStage.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
-        openModal('Off-Stage Results', 'offstage');
-    });
-
-    menuLinkOnStage.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
-        openModal('On-Stage Results', 'onstage');
-    });
-
-    menuLinkGallery.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
-        openModal('Fest Photo Gallery', 'gallery');
-    });
-
     menuLinkSchedule.addEventListener('click', (e) => {
         e.preventDefault();
         closeDrawer();
         openModal('Fest Program Schedule', 'schedule');
     });
 
-    menuLinkTeams.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeDrawer();
-        openModal('Group Standings', 'scoreboard');
-    });
 
 });
