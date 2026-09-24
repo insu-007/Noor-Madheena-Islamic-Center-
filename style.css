@@ -157,7 +157,10 @@ html, body {
 
 /* Header Center Title Typography */
 .header-title {
-    transform: translate(-50%, 20px);
+    position: abuolute;
+    left: 50%;
+    top: 25px;
+    transfrom: translateX(-50%)
     text-align: center;
     display: flex;
     flex-direction: column;
