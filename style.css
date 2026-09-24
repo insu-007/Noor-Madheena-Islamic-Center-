@@ -4,7 +4,9 @@
    mobile-first layout, rich typography, and responsive visual hierarchy.
    ========================================================================== */
 
-/* --- CSS Variables & Theme Tokens --- */
+   /* --- CSS Variables & Theme Tokens --- */
+
+   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
     --color-primary: #9E0012;      /* Deep Maroon / Crimson */
     --color-primary-dark: #7A000D; /* Darker Crimson for active states */
@@ -160,6 +162,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translate(-30px, 90px);
 }
 
 .header-title h1 {
@@ -195,6 +198,7 @@ html, body {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(158, 0, 18, 0.3);
     transition: transform 0.2s ease, background-color 0.2s ease;
+    font-family: 'Bebas Neue',sans-serif;
 }
 
 .menu-btn:active {
@@ -249,6 +253,7 @@ html, body {
     position: relative;
     text-shadow: 0 4px 18px rgba(158, 0, 18, 0.25);
     user-select: none;
+    
 }
 
 /* --- Red Pill "SCORE BOARD" Button --- */
@@ -271,10 +276,10 @@ html, body {
 }
 
 .btn-scoreboard span {
-    font-family: var(--font-pixel);
-    font-size: clamp(10.5px, 3.2vw, 13px);
+    font-family:'Bebas Neue',sans-serif;
+    font-size: clamp(13.5px, 3.9vw, 25px);
     letter-spacing: 0.5px;
-    word-spacing: -2px;
+    word-spacing: 2px;
     display: inline-block;
 }
 
