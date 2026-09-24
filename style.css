@@ -163,7 +163,6 @@ html, body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    transform: translateY(90px);
 }
 
 .header-title h1 {
