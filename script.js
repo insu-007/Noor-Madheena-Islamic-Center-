@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
+
+
     const galleryPhotos = [
         { title: 'loding..............', tag: 'Stage 1', image: '' },
         { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #1E293B, #9E0012)' },
@@ -59,12 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'loding..............', tag: 'Main Arena', image: 'linear-gradient(135deg, #9E0012, #7A000D)' }
     ];
 
+    const offStagePrograms = [
+        {
+            id: 101,
+            title: '',
+            category: '',
+            status: 'COOMING SOON',
+            winners: [
+                { place: '1st', name: '', chestNo: '999', team: '', grade: '' },
+            ]
+        },
+
+    ];
+    
+    const onStagePrograms = [
+        {
+            id: 201,
+            title: '',
+            category: '',
+            status: 'COMING SOON',
+            winners: [
+                { place: '1st', name: '', chestNo: '999', team: ' ', grade: '' },
+
+            ]
+        },
+
+    ];
+    
     const scheduleData = [
         { time: '00:00 AM', event: 'W8', stage: 'Error(Main Hall)' },
-        { time: '00:00 AM', event: 'W8', stage: 'Error' },
-        { time: '00:00 AM', event: 'W8', stage: 'Error' },
-        { time: '00:00 AM', event: 'W8', stage: 'Error(Main Hall)' },
-        { time: '00:00 AM', event: 'W8', stage: 'Error' }
     ];
 
     // --- Side Drawer Navigation Functions ---
