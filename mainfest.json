@@ -1,15 +1,16 @@
 {
-    "name": "Noor Madeena Meelad Arts Fest 2026",
-    "short_name": "Noor Madeena",
-    "start_url": "./",
-    "display": "standalone",
-    "background_color": "#FFFFFF",
-    "theme_color": "#9E0012",
-    "icons": [
-      {
-        "src": "./logo.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
-  }
+  "name": "Noor Madeena Meelad Arts Fest 2026",
+  "short_name": "Noor Madeena",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#9E0012",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
