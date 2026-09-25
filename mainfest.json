@@ -1,16 +1,17 @@
 {
   "name": "Noor Madeena Meelad Arts Fest 2026",
   "short_name": "Noor Madeena",
-  "start_url": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
+  "background_color": "#ffffff",
   "theme_color": "#9E0012",
   "icons": [
     {
-      "src": "./app-icon-512.png",
+      "src": "/app-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
