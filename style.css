@@ -134,8 +134,8 @@ html, body {
 
 /* Header Logo Left */
 .logo-container {
-    width: clamp(65px, 18vw, 95px);
-    height: clamp(65px, 18vw, 95px);
+    width: 150px;
+    height:150px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -186,8 +186,8 @@ html, body {
 
 /* Header Right Hamburger Button */
 .menu-btn {
-    width: 38px;
-    height: 38px;
+    width: 75px;
+    height: 55px;
     border-radius: 50%;
     background-color: var(--color-primary);
     color: var(--color-bg-white);
