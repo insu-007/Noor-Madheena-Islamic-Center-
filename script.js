@@ -50,15 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const galleryPhotos = [
-        { title: 'loding..............', tag: 'Stage 1', image: '' },
-        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #1E293B, #9E0012)' },
-        { title: 'loding..............', tag: 'Hall B', image: 'linear-gradient(135deg, #059669, #10B981)' },
-        { title: 'loding..............', tag: 'Stage 2', image: 'linear-gradient(135deg, #D97706, #B45309)' },
-        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #2563EB, #1E40AF)' },
-        { title: 'loding..............', tag: 'Main Arena', image: 'linear-gradient(135deg, #9E0012, #7A000D)' },
-        { title: 'loding..............', tag: 'Stage 1', image: 'linear-gradient(135deg, #2563EB, #1E40AF)' },
-        { title: 'loding..............', tag: 'Main Arena', image: 'linear-gradient(135deg, #9E0012, #7A000D)' }
+    const galleryPhotosd = [
+        //{ title: 'loding..............', tag: 'Stage 1', image: '' },
+
     ];
 
     const offStagePrograms = [
