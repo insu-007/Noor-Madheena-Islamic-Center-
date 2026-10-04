@@ -181,6 +181,31 @@
 
             ]
         },
+
+           {
+            id: 101,
+            title: 'Prasangam ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Insaf ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Mubashir', chestNo: 'F', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+             {
+            id: 101,
+            title: 'Prasangam ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Swafwan', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
     ];
     
     const scheduleData = [
