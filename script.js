@@ -171,7 +171,7 @@
 
         {
             id: 101,
-            title: 'Arbic Song ',
+            title: 'Song ',
             category: 'Senior',
             status: 'Uploaded',
             winners: [
