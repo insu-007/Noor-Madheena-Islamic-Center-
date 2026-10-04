@@ -44,7 +44,7 @@
 
     const teamsData = [
         { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 46, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Muhammed Jazeel', points: 17, badge: 'rank-2' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 17, badge: 'rank-2' },
     ];
 
 
@@ -141,6 +141,19 @@
                 { place: '2nd', name: 'Muhammed Swabeeh ', chestNo: 'L', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Abrar', chestNo: 'V', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Musthafa', chestNo: 'U', team: 'BETA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Arbic Song ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhula Jazeell', chestNo: 'BV', team: 'ALPHA', grade: 'A'},
+                
             ]
         },
     ];
