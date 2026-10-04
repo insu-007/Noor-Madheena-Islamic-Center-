@@ -1,171 +1,502 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="theme-color" content="#9E0012">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Funnor Arts Fest 2026</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz,wght@6..96,900&family=Cinzel:wght@500;700;800;900&family=Cinzel+Decorative:wght@700&family=Press+Start+2P&family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="mainfest" href="mainfest.json">
-</head>
-<body>
+/**
+ * Noor Madeena Meelad Arts Fest 2026 - Interactive Script
+ * Handles view transitions, side drawer toggling, modal content generation,
+ * live search filtering, and state management.
+ */
 
-    <!-- Main Mobile Application Container -->
-    <div class="mobile-container">
+ document.addEventListener('DOMContentLoaded', () => {
+
+    // --- DOM Elements ---
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerMenu = document.getElementById('drawerMenu');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+    const scoreboardBtn = document.getElementById('scoreboardBtn');
+    const offStageBtn = document.getElementById('offStageBtn');
+    const onStageBtn = document.getElementById('onStageBtn');
+
+    const navHomeBtn = document.getElementById('navHomeBtn');
+    const navGalleryBtn = document.getElementById('navGalleryBtn');
+
+    const modalView = document.getElementById('modalView');
+    const modalBackBtn = document.getElementById('modalBackBtn');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const searchInput = document.getElementById('searchInput');
+    const searchBarContainer = document.getElementById('searchBarContainer');
+
+    const logoBtn = document.getElementById('logoBtn');
+
+    // Menu Drawer Links
+    const menuLinkHome = document.getElementById('menuLinkHome');
+    const menuLinkScoreboard = document.getElementById('menuLinkScoreboard');
+    const menuLinkOffStage = document.getElementById('menuLinkOffStage');
+    const menuLinkOnStage = document.getElementById('menuLinkOnStage');
+    const menuLinkGallery = document.getElementById('menuLinkGallery');
+    const menuLinkSchedule = document.getElementById('menuLinkSchedule');
+    const menuLinkTeams = document.getElementById('menuLinkTeams');
+
+    // Current active modal view type: 'scoreboard' | 'offstage' | 'onstage' | 'gallery' | 'schedule'
+    let currentModalType = '';
+
+    // --- Mock Database for Arts Fest 2026 ---
+
+    const teamsData = [
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 92, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 35, badge: 'rank-2' },
+    ];
+
+
+
+    const galleryPhotos = [
+        { title: 'The Path of Knowledge 📖✨', tag: '#Ilm 🤍', image: 'https://cdn.discordapp.com/attachments/1532632973243973682/1556251832899342426/IMG-20261004-WA0046.jpg?backend=b2&ex=6ac37bf6&is=6ac22a76&hm=9be09e4c0a499ad09f2c814a2fa96d85b3b641cbd14a19dd0c649cde5ce6a6e2' },
+];
+
+    const offStagePrograms = [
+        {
+            id: 101,
+            title: 'Writing',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Abdhul Haseeb ', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Rani', chestNo: 'O', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'x', team: 'BETA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Writing',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer ', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Reading',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Qira at al-Ibarah',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer  ', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashaad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mubassir kk', chestNo: 'F', team: 'BETA', grade: 'A'},
+            ]
+        },
+
+
+        {
+            id: 101,
+            title: 'Memory Test',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Word Battle ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Calligrthy',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Mubassir kk  ', chestNo: 'F', team: 'BEAT', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Mubashir ', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Insaf', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+            ]
+        },
         
-        <!-- Background Art / Decorative Elements -->
-        <div class="bg-decorations">
-            <!-- Official Fest Logo Watermark Background -->
-            <div class="watermark-arabic">
-                <img src="logo.png" alt="Watermark Logo" class="watermark-logo-img" />
-            </div>
-            <!-- Bottom Colorful Waves -->
-            <div class="wave-bg">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path d="M0,80 C150,140 350,20 500,90 L500,150 L0,150 Z" fill="#FDE8E8" opacity="0.7"></path>
-                    <path d="M0,100 C200,40 300,130 500,70 L500,150 L0,150 Z" fill="#FEF3D6" opacity="0.8"></path>
-                    <path d="M0,115 C120,80 380,120 500,95 L500,150 L0,150 Z" fill="#E4F5EB" opacity="0.5"></path>
-                </svg>
-            </div>
-        </div>
+    ];
+    
+    const onStagePrograms = [
+        {
+            id: 101,
+            title: 'Adhan ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Abdul Qadar  ', chestNo: 'T', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Swabeeh ', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Abrar', chestNo: 'V', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Musthafa', chestNo: 'U', team: 'BETA', grade: 'A'},
+            ]
+        },
 
-        <!-- Top Header Navigation -->
-        <header class="app-header">
-            <!-- Left Logo -->
-            <div class="logo-container" id="logoBtn">
-                <img src="logo.png" alt="Noor Madeena Fest Logo" class="fest-logo-img">
-            </div>
+        {
+            id: 101,
+            title: 'Arbic Song ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
 
-            <!-- Header Center Title Text -->
-            <div class="header-title">
-                <h1>NOOR MADHEENA ARTS FEST 2026</h1>
-            </div>
+            ]
+        },
 
-            <!-- Right Hamburger Menu Button -->
-            <button class="menu-btn" id="menuToggleBtn" aria-label="Toggle Menu">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="6" x2="20" y2="6"></line>
-                    <line x1="4" y1="12" x2="20" y2="12"></line>
-                    <line x1="4" y1="18" x2="20" y2="18"></line>
-                </svg>
-            </button>
-        </header>
+        {
+            id: 101,
+            title: 'Song ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Sabith ks', chestNo: 'K', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Sabith AA', chestNo: 'Q', team: 'BETA', grade: 'A'},
 
-        <!-- Main Content Area -->
-        <main class="main-content">
+            ]
+        },
+
+           {
+            id: 101,
+            title: 'Prasangam ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Insaf ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Mubashir', chestNo: 'F', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+             {
+            id: 101,
+            title: 'Prasangam ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Swafwan', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
+              {
+            id: 101,
+            title: 'Arbic Song ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Swafwan ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'X', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+              {
+            id: 101,
+            title: 'Mappilappattu ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashhad ', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+    
+    ];
+    
+    const scheduleData = [
+        { time: '07:00 AM  07:40 AM ', event: 'Qira at al-Ibarah (seniors)', stage: 'stage 2' },
+        { time: '07:00 AM  07:40 AM', event: 'Reading (juniors)', stage: 'stage 3' },
+        { time: '07:40 AM  08:00 AM', event: 'Writing (seniors)', stage: 'stage 2' },
+        { time: '07:40 AM  08:00 AM', event: 'Writing (juniors)', stage: 'stage 3' },
+        { time: '08:00 AM  08:45 AM', event: 'Calligraphy (seniors)', stage: 'stage 2' },
+        { time: '08:00 AM  08:45 AM', event: 'Memory Test (juniors)', stage: 'stage 3' },
+        { time: '08:45 AM  09:10 AM', event: 'Word Battle (juniors)', stage: 'stage 3' },
+        { time: '10:00 AM  10:30 AM', event: 'Adhan (juniors)', stage: 'stage 1' },
+        { time: '10:00 AM  10:30 AM', event: 'Inauguration Ceremony', stage: 'stage 1' },
+        { time: '11:45 AM  01:00 PM', event: 'Prasangam (seniors)', stage: 'stage 1' },
+        { time: '11:45 AM  01:00 PM', event: 'Prasangam (juniors)', stage: 'stage 1' },
+        { time: '02:00 PM  03:00 PM', event: 'Arabic Song (seniors)', stage: 'stage 1' },
+        { time: '02:00 PM  03:00 PM', event: 'Arabic Song (seniors)', stage: 'stage 1' },
+        { time: '03:00 PM  03:30 PM', event: 'Mappilappattu (seniors)', stage: 'stage 1' },
+        { time: '04:15 PM  05:00 PM', event: 'Song (juniors)', stage: 'stage 1' },
+        { time: '05:00 PM  06:00 PM', event: 'Dars Class (seniors)', stage: 'stage 1' },
+
+    
+    
+    ];
+
+    // --- Side Drawer Navigation Functions ---
+
+    function openDrawer() {
+        drawerOverlay.classList.add('active');
+        drawerMenu.classList.add('active');
+    }
+
+    function closeDrawer() {
+        drawerOverlay.classList.remove('active');
+        drawerMenu.classList.remove('active');
+    }
+
+    menuToggleBtn.addEventListener('click', openDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+
+    // --- Modal View Controller ---
+
+    function openModal(title, type) {
+        modalTitle.textContent = title;
+        currentModalType = type;
+        searchInput.value = '';
+        searchBarContainer.style.display = (type === 'gallery' || type === 'schedule') ? 'none' : 'block';
+        
+        renderModalContent(type, '');
+        modalView.classList.add('active');
+    }
+
+    function closeModal() {
+        modalView.classList.remove('active');
+        navHomeBtn.classList.add('active');
+        navGalleryBtn.classList.remove('active');
+    }
+
+    modalBackBtn.addEventListener('click', closeModal);
+
+    // --- Render Content Dynamically ---
+
+    function renderModalContent(type, filterQuery) {
+        const query = filterQuery.toLowerCase().trim();
+        modalBody.innerHTML = '';
+
+        if (type === 'scoreboard') {
+            const titleEl = document.createElement('h3');
+            titleEl.style.margin = '0 0 14px 0';
+            titleEl.style.fontSize = '15px';
+            titleEl.style.color = '#9E0012';
+            titleEl.textContent = 'OVERALL GROUP LEADERBOARD 2026';
+            modalBody.appendChild(titleEl);
+
+            const filteredTeams = teamsData.filter(team => 
+                team.name.toLowerCase().includes(query) || team.category.toLowerCase().includes(query)
+            );
+
+            if (filteredTeams.length === 0) {
+                modalBody.innerHTML += `<p style="text-align:center; padding: 20px; color: #64748B;">No team matching "${filterQuery}"</p>`;
+                return;
+            }
+
+            filteredTeams.forEach(team => {
+                const card = document.createElement('div');
+                card.className = 'scoreboard-card';
+                card.innerHTML = `
+                    <div class="team-rank ${team.badge}">${team.rank}</div>
+                    <div class="team-info">
+                        <div class="team-name">${team.name}</div>
+                        <div class="team-category">${team.category}</div>
+                    </div>
+                    <div class="team-points">${team.points} pts</div>
+                `;
+                modalBody.appendChild(card);
+            });
+        } 
+        else if (type === 'offstage' || type === 'onstage') {
+            const list = (type === 'offstage') ? offStagePrograms : onStagePrograms;
             
-            <!-- Sparkle Icon background detail -->
-            <div class="sparkle-icon">
-                <svg viewBox="0 0 24 24" width="36" height="36" fill="#FFF2B2">
-                    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
-                </svg>
-            </div>
+            const filteredPrograms = list.filter(prog => {
+                const titleMatch = prog.title.toLowerCase().includes(query);
+                const catMatch = prog.category.toLowerCase().includes(query);
+                const winnerMatch = prog.winners.some(w => w.name.toLowerCase().includes(query) || w.chestNo.includes(query) || w.team.toLowerCase().includes(query));
+                return titleMatch || catMatch || winnerMatch;
+            });
 
-            <!-- Stylized "RESULT" Graphic Title (Ultra-Modern Luxury Serif) -->
-            <div class="result-title-container">
-                <h1 class="result-luxury-title">FUNNOR</h1>
-            </div>
+            if (filteredPrograms.length === 0) {
+                modalBody.innerHTML = `<p style="text-align:center; padding: 30px; color: #64748B;">No result found matching "${filterQuery}"</p>`;
+                return;
+            }
 
-            <!-- Red Pill "SCORE BOARD" Button -->
-            <div class="scoreboard-btn-wrapper">
-                <button class="btn-scoreboard" id="scoreboardBtn">
-                    <span>SCORE BOARD</span>
-                </button>
-            </div>
+            filteredPrograms.forEach(prog => {
+                const itemCard = document.createElement('div');
+                itemCard.className = 'program-item-card';
+                
+                let winnersHTML = '';
+                prog.winners.forEach(w => {
+                    winnersHTML += `
+                        <div class="winner-card">
+                            <div class="winner-place">${w.place}</div>
+                            <div style="flex:1">
+                                <div class="winner-name">${w.name} <span style="font-size:11px; font-weight:normal; color:#9E0012">(Code Letter #${w.chestNo})</span></div>
+                                <div class="winner-sub">${w.team} • Grade: <strong>${w.grade}</strong></div>
+                            </div>
+                        </div>
+                    `;
+                });
 
-            <!-- Two Main Action Pill Buttons -->
-            <div class="action-buttons-group">
-                <button class="btn-outline-pill" id="offStageBtn">
-                    <span>OFF<br>STAGE<br>PROGRAMS</span>
-                </button>
+                itemCard.innerHTML = `
+                    <div class="program-title">${prog.title}</div>
+                    <div class="program-meta">
+                        <span>Category: ${prog.category}</span>
+                        <span class="badge-status">${prog.status}</span>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        ${winnersHTML}
+                    </div>
+                `;
+                modalBody.appendChild(itemCard);
+            });
+        }
+        else if (type === 'gallery') {
+            const container = document.createElement('div');
+            container.className = 'gallery-grid';
 
-                <button class="btn-outline-pill" id="onStageBtn">
-                    <span>ON<br>STAGE<br>PROGRAMS</span>
-                </button>
-            </div>
+            galleryPhotos.forEach(photo => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <img
+                         src="${photo.image}"
+                         alt="${photo.title}"
+                        
+            style="width:100%; height:100%; object-
+            fit:cover;border-radius:12px;"
+                    >
 
-        </main>
+                    <div class="gallery-caption">
+                        <div style="font-weight:bold">${photo.title}</div>
+                        <div style="opacity:0.8; font-size:10px">${photo.tag}</div>
+                    </div>
+                `;
+                item.addEventListener('click', () => {
+                    const fullScreen = document.createElement('div');
+                
+                    fullScreen.style.cssText = `
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(0,0,0,0.95);
+                        z-index: 9999;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                    `;
+                
+                    fullScreen.innerHTML = `
+                        <img src="${photo.image}"
+                             style="max-width:100%; max-height:90%; object-fit:contain; border-radius:12px;">
+                    `;
+                
+                    fullScreen.addEventListener('click', () => {
+                        fullScreen.remove();
+                    });
+                
+                    document.body.appendChild(fullScreen);
+                });
+                container.appendChild(item);
+            });
+            modalBody.appendChild(container);
+        }
+        else if (type === 'schedule') {
+            const titleEl = document.createElement('h3');
+            titleEl.style.margin = '0 0 14px 0';
+            titleEl.style.fontSize = '15px';
+            titleEl.style.color = '#9E0012';
+            titleEl.textContent = 'FEST DAY PROGRAM SCHEDULE';
+            modalBody.appendChild(titleEl);
 
-        <!-- Bottom Fixed Navigation Bar -->
-        <nav class="bottom-nav">
-            <div class="nav-gold-line"></div>
-            <div class="nav-items-wrapper">
-                <button class="nav-item active" id="navHomeBtn" aria-label="Home">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                </button>
+            scheduleData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'scoreboard-card';
+                card.innerHTML = `
+                    <div style="font-weight: bold; color: #9E0012; width: 80px; font-size: 12px;">${item.time}</div>
+                    <div class="team-info">
+                        <div class="team-name" style="font-size:14px;">${item.event}</div>
+                        <div class="team-category">${item.stage}</div>
+                    </div>
+                `;
+                modalBody.appendChild(card);
+            });
+        }
+    }
 
-                <button class="nav-item" id="navGalleryBtn" aria-label="Gallery">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="3" ry="3"></rect>
-                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                        <polyline points="21 15 16 10 5 21"></polyline>
-                        <!-- Layered frame effect -->
-                        <path d="M7 3h14v14" opacity="0.5"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+    // --- Search Input Listener ---
+    searchInput.addEventListener('input', (e) => {
+        renderModalContent(currentModalType, e.target.value);
+    });
 
-        <!-- Slide Drawer Menu -->
-        <div class="drawer-overlay" id="drawerOverlay"></div>
-        <div class="drawer-menu" id="drawerMenu">
-            <div class="drawer-header">
-                <div class="drawer-title">Fest Navigation</div>
-                <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
-            </div>
-            <div class="drawer-body">
-                <ul class="drawer-links">
-                    <li><a href="#" id="menuLinkHome"><span class="icon">🏠</span> Home Page</a></li>
-                    <li><a href="#" id="menuLinkSchedule"><span class="icon">📅</span> Program Schedule</a></li>
-                    <li>
-                        <a href="https://insaf-dev.vercel.app/" target="_blank">
-                            <span class="icon">👾</span> Developer
-                        </a>
-                    </li> 
-                </ul>
-                <div class="drawer-footer">
-                    <p>Funnoor Arts Fest 2026</p>
-                    <small>Official Results & Live Portal</small>
-                </div>
-            </div>
-        </div>
+    // --- Action Button Triggers ---
 
-        <!-- Fullscreen Interactive View / Modal Container -->
-        <div class="modal-view" id="modalView">
-            <div class="modal-header">
-                <button class="modal-back-btn" id="modalBackBtn">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
-                </button>
-                <h2 class="modal-title" id="modalTitle">View Title</h2>
-                <div style="width: 32px;"></div>
-            </div>
+    scoreboardBtn.addEventListener('click', () => {
+        openModal('Overall Scoreboard', 'scoreboard');
+    });
 
-            <!-- Search and Filter Bar inside Modal -->
-            <div class="search-bar-container" id="searchBarContainer">
-                <input type="text" id="searchInput" placeholder="Search program, student, chest no..." />
-                <span class="search-icon">🔍</span>
-            </div>
+    offStageBtn.addEventListener('click', () => {
+        openModal('Off-Stage Results', 'offstage');
+    });
 
-            <!-- Modal Dynamic Content Body -->
-            <div class="modal-body" id="modalBody">
-                <!-- Dynamic Content Loaded via JS -->
-            </div>
-        </div>
+    onStageBtn.addEventListener('click', () => {
+        openModal('On-Stage Results', 'onstage');
+    });
 
-    </div>
+    logoBtn.addEventListener('click', () => {
+        closeModal();
+    });
 
-    <!-- JavaScript Source Code -->
-    <script src="script.js"></script>
-</body>
-</html>
+    // --- Bottom Navigation Listeners ---
+
+    navHomeBtn.addEventListener('click', () => {
+        closeModal();
+        navHomeBtn.classList.add('active');
+        navGalleryBtn.classList.remove('active');
+    });
+
+    navGalleryBtn.addEventListener('click', () => {
+        navGalleryBtn.classList.add('active');
+        navHomeBtn.classList.remove('active');
+        openModal('Fest Photo Gallery', 'gallery');
+    });
+
+    // --- Menu Links Click Handlers ---
+
+    menuLinkHome.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeDrawer();
+        closeModal();
+    });
+
+    menuLinkSchedule.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeDrawer();
+        openModal('Fest Program Schedule', 'schedule');
+    });
+
+
+});
