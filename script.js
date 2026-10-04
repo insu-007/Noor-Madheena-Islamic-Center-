@@ -175,7 +175,7 @@
             category: 'Senior',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Muhammed Zwabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Sabith ks', chestNo: 'K', team: 'BETA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Sabith AA', chestNo: 'Q', team: 'BETA', grade: 'A'},
 
