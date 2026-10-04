@@ -164,7 +164,7 @@
             winners: [
                 { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Abdhula Jazeell', chestNo: 'BV', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'BV', team: 'ALPHA', grade: 'A'},
 
             ]
         },
