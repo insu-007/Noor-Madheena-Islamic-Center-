@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'GROUP A', category: '', points: 0, badge: 'rank-1' },
-        { rank: 2, name: 'GROUP B', category: '', points: 0, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 23, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Muhammed Jazeel', points: 13, badge: 'rank-2' },
     ];
 
 
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Juniors',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Abdhul Haseeb ', chestNo: 'N', team: '', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Rani', chestNo: 'O', team: '', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'x', team: '', grade: 'A'},
+                { place: '1st', name: 'Abdhul Haseeb ', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Rani', chestNo: 'O', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'x', team: 'BETA', grade: 'A'},
             ]
         },
 
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Senior',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Muhammed Shaheer ', chestNo: 'G', team: '', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Ashmal', chestNo: 'E', team: '', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: '', grade: 'A'},
+                { place: '1st', name: 'Muhammed Shaheer ', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
             ]
         },
 
@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Juniors',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: '', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Haseeb', chestNo: 'N', team: '', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: '', grade: 'A'},
+                { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
             ]
         },
 
@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'Senior',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Muhammed Shaheer  ', chestNo: 'G', team: '', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Ashaad', chestNo: 'A', team: '', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Mubassir Kanayam', chestNo: 'F', team: '', grade: 'A'},
+                { place: '1st', name: 'Muhammed Shaheer  ', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashaad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mubassir kk', chestNo: 'F', team: 'BETA', grade: 'A'},
             ]
         },
 
