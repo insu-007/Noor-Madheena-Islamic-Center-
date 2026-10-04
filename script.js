@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const galleryPhoto = [
+    const galleryPhotos = [
         { title: 'loding..............', tag: 'Stage 1', image: '' },
 ];
 
