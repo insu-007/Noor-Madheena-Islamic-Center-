@@ -51,7 +51,7 @@
 
 
     const galleryPhotos = [
-        { title: 'loding..............', tag: 'Stage 1', image: '' },
+        { title: 'test', tag: 'test', image: 'https://discord.com/channels/@me/1532632973243973682/1556251834002186381' },
 ];
 
     const offStagePrograms = [
