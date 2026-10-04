@@ -57,11 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const offStagePrograms = [
         {
             id: 101,
-            title: '',
-            category: '',
-            status: 'COOMING SOON',
+            title: 'Writing',
+            category: 'Juniors',
+            status: 'Uploaded',
             winners: [
-                { place: '1st', name: '', chestNo: '999', team: '', grade: '' },
+                { place: '1st', name: 'Abdhul Haseeb ', chestNo: 'N', team: '', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Rani', chestNo: 'O', team: '', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'x', team: '', grade: 'A'},
             ]
         },
 
@@ -201,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="winner-card">
                             <div class="winner-place">${w.place}</div>
                             <div style="flex:1">
-                                <div class="winner-name">${w.name} <span style="font-size:11px; font-weight:normal; color:#9E0012">(Chest #${w.chestNo})</span></div>
+                                <div class="winner-name">${w.name} <span style="font-size:11px; font-weight:normal; color:#9E0012">(Code Letter #${w.chestNo})</span></div>
                                 <div class="winner-sub">${w.team} • Grade: <strong>${w.grade}</strong></div>
                             </div>
                         </div>
