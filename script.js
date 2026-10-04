@@ -43,8 +43,8 @@
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 84, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 34, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 92, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 35, badge: 'rank-2' },
     ];
 
 
@@ -217,7 +217,20 @@
                 { place: '3rd', name: 'Muhammed Mishab', chestNo: 'X', team: 'BETA', grade: 'A'},
 
             ]
-        }
+        },
+
+              {
+            id: 101,
+            title: 'Mappilappattu ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashhad ', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+
+            ]
+        },
 
     
     ];
