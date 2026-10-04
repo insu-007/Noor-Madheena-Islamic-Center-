@@ -206,6 +206,20 @@
 
             ]
         },
+              {
+            id: 101,
+            title: 'Arbic Song ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Swafwan ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mishab', chestNo: 'X', team: 'BETA', grade: 'A'},
+
+            ]
+        }
+
+    
     ];
     
     const scheduleData = [
