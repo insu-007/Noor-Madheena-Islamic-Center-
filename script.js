@@ -134,9 +134,9 @@
             category: 'Senior',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '1st', name: 'Muhammed Mubassir kk  ', chestNo: 'F', team: 'BEAT', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Mubashir ', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'D', team: 'ALPHA', grade: 'A'},
             ]
         },
         
