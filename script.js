@@ -132,16 +132,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const onStagePrograms = [
         {
-            id: 201,
-            title: '',
-            category: '',
-            status: 'COMING SOON',
+            id: 101,
+            title: 'Adhan ',
+            category: 'Juniors',
+            status: 'Uploaded',
             winners: [
-                { place: '1st', name: '', chestNo: '999', team: ' ', grade: '' },
-
+                { place: '1st', name: 'Abdul Qadar  ', chestNo: 'T', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Swabeeh ', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Abrar', chestNo: 'V', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Chandu Babu', chestNo: 'U', team: 'BETA', grade: 'A'},
             ]
         },
-
     ];
     
     const scheduleData = [
