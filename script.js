@@ -4,7 +4,7 @@
  * live search filtering, and state management.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
 
     // --- DOM Elements ---
     const menuToggleBtn = document.getElementById('menuToggleBtn');
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
             ]
         },
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             winners: [
                 { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
             ]
         },
 
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             winners: [
                 { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
             ]
         },
         
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { place: '1st', name: 'Abdul Qadar  ', chestNo: 'T', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Swabeeh ', chestNo: 'L', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Abrar', chestNo: 'V', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Chandu Babu', chestNo: 'U', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Musthafa', chestNo: 'U', team: 'BETA', grade: 'A'},
             ]
         },
     ];
