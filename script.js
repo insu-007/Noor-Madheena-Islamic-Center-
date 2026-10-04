@@ -67,6 +67,42 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
+        {
+            id: 101,
+            title: 'Writing',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer ', chestNo: 'G', team: '', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashmal', chestNo: 'E', team: '', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: '', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Reading',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: '', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Haseeb', chestNo: 'N', team: '', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: '', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Qira at al-Ibarah',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer  ', chestNo: 'G', team: '', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashaad', chestNo: 'A', team: '', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mubassir Kanayam', chestNo: 'F', team: '', grade: 'A'},
+            ]
+        },
+
     ];
     
     const onStagePrograms = [
