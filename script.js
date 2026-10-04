@@ -103,17 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
-        {
-            id: 101,
-            title: 'Memory Test',
-            category: 'Juniors',
-            status: 'Uploaded',
-            winners: [
-                { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
-            ]
-        },
 
         {
             id: 101,
