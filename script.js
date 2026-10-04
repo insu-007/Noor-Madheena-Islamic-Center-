@@ -123,7 +123,7 @@
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'BEAT', grade: 'A'},
+                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'BETA', grade: 'A'},
                 { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
             ]
         },
