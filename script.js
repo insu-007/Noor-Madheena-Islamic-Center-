@@ -172,7 +172,7 @@
         {
             id: 101,
             title: 'Song ',
-            category: 'Senior',
+            category: 'Juniors',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
