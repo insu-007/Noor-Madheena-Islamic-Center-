@@ -51,7 +51,7 @@
 
 
     const galleryPhotos = [
-        { title: 'test', tag: 'test', image: 'https://discord.com/channels/@me/1532632973243973682/1556251834002186381' },
+        { title: 'test', tag: 'test', image: 'https://cdn.discordapp.com/attachments/1532632973243973682/1556251832899342426/IMG-20261004-WA0046.jpg?backend=b2&ex=6ac37bf6&is=6ac22a76&hm=9be09e4c0a499ad09f2c814a2fa96d85b3b641cbd14a19dd0c649cde5ce6a6e2' },
 ];
 
     const offStagePrograms = [
