@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 23, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Muhammed Jazeel', points: 13, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 47, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Muhammed Jazeel', points: 16, badge: 'rank-2' },
     ];
 
 
@@ -103,6 +103,42 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
+        {
+            id: 101,
+            title: 'Memory Test',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Memory Test',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Word Battle ',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+            ]
+        },
+        
     ];
     
     const onStagePrograms = [
