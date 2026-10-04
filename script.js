@@ -50,10 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const galleryPhotosd = [
-        //{ title: 'loding..............', tag: 'Stage 1', image: '' },
-
-    ];
+    const galleryPhotod = [
+        { title: 'loding..............', tag: 'Stage 1', image: '' },
+];
 
     const offStagePrograms = [
         {
@@ -83,7 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     
     const scheduleData = [
-        { time: '00:00 AM', event: 'W8', stage: 'Error(Main Hall)' },
+        { time: '07:00 AM  07:40 AM ', event: 'Qira at al-Ibarah (seniors)', stage: 'stage 2' },
+        { time: '07:00 AM  07:40 AM', event: 'Reading (juniors)', stage: 'stage 3' },
+        { time: '07:40 AM  08:00 AM', event: 'Writing (seniors)', stage: 'stage 2' },
+        { time: '07:40 AM  08:00 AM', event: 'Writing (juniors)', stage: 'stage 3' },
+        { time: '08:00 AM  08:45 AM', event: 'Calligraphy (seniors)', stage: 'stage 2' },
+        { time: '08:00 AM  08:45 AM', event: 'Memory Test (juniors)', stage: 'stage 3' },
+        { time: '08:45 AM  09:10 AM', event: 'Word Battle (juniors)', stage: 'stage 3' },
+        { time: '10:00 AM  10:30 AM', event: 'Adhan (juniors)', stage: 'stage 1' },
+        { time: '10:00 AM  10:30 AM', event: 'Inauguration Ceremony', stage: 'stage 1' },
+        { time: '11:45 AM  01:00 PM', event: 'Prasangam (seniors)', stage: 'stage 1' },
+        { time: '11:45 AM  01:00 PM', event: 'Prasangam (juniors)', stage: 'stage 1' },
+        { time: '02:00 PM  03:00 PM', event: 'Arabic Song (seniors)', stage: 'stage 1' },
+        { time: '02:00 PM  03:00 PM', event: 'Arabic Song (seniors)', stage: 'stage 1' },
+        { time: '03:00 PM  03:30 PM', event: 'Mappilappattu (seniors)', stage: 'stage 1' },
+        { time: '04:15 PM  05:00 PM', event: 'Song (juniors)', stage: 'stage 1' },
+        { time: '05:00 PM  06:00 PM', event: 'Dars Class (seniors)', stage: 'stage 1' },
+
+    
+    
     ];
 
     // --- Side Drawer Navigation Functions ---
