@@ -164,7 +164,20 @@
             winners: [
                 { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'BV', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+        {
+            id: 101,
+            title: 'Arbic Song ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Zwabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Sabith ks', chestNo: 'K', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Sabith AA', chestNo: 'Q', team: 'BETA', grade: 'A'},
 
             ]
         },
