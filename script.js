@@ -127,19 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
             ]
         },
-
-        {
-            id: 101,
-            title: 'Adhan ',
-            category: 'Juniors',
-            status: 'Uploaded',
-            winners: [
-                { place: '1st', name: 'Muhammed Answab  ', chestNo: 'T', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Chand Babu ', chestNo: 'L', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'V', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Muhammed Haseeb', chestNo: 'U', team: 'BETA', grade: 'A'},
-            ]
-        },
         
     ];
     
