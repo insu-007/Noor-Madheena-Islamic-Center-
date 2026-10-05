@@ -397,7 +397,7 @@
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
-                { place: '2nd', name: 'Abdul Sabith', chestNo: 'K', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Sabith', chestNo: 'K', team: 'BETA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
 
             ]
