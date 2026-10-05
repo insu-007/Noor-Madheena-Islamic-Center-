@@ -43,8 +43,8 @@
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 115, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 57, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 131, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 59, badge: 'rank-2' },
     ];
 
 
@@ -57,7 +57,7 @@
         {
             id: 101,
             title: 'Writing',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Abdhul Haseeb ', chestNo: 'N', team: 'ALPHA', grade: 'A'},
@@ -81,7 +81,7 @@
         {
             id: 101,
             title: 'Reading',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Swafwan Pavukkonam  ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
@@ -106,7 +106,7 @@
         {
             id: 101,
             title: 'Memory Test',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Rani  ', chestNo: 'O', team: 'ALPHA', grade: 'A'},
@@ -118,7 +118,7 @@
         {
             id: 101,
             title: 'Word Battle ',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
@@ -155,21 +155,34 @@
          {
             id: 101,
             title: 'Prabandham',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Ajmal  ', chestNo: 'J', team: 'BEAT', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Bilal ', chestNo: 'P', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Answab', chestNo: 'M', team: 'ALPHA', grade: 'A'},
             ]
-        }
+        },
+
+
+         {
+            id: 101,
+            title: 'Swaraf',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Swafwan ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Sabith Aa', chestNo: 'Q', team: 'BETA', grade: 'A'},
+            ]
+        },
     ];
     
     const onStagePrograms = [
         {
             id: 101,
             title: 'Adhan ',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Abdul Qadar  ', chestNo: 'T', team: 'ALPHA', grade: 'A'},
@@ -195,7 +208,7 @@
         {
             id: 101,
             title: 'Song ',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
@@ -220,7 +233,7 @@
              {
             id: 101,
             title: 'Prasangam ',
-            category: 'Juniors',
+            category: 'Junior',
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
@@ -287,12 +300,27 @@
             category: 'Senior',
             status: 'Uploaded',
             winners: [
-                { place: '1st', name: 'Muhammed Mubashir Kk', chestNo: 'F', team: 'ALPHA', grade: 'A'},
+                { place: '1st', name: 'Muhammed Mubashir Kk', chestNo: 'F', team: 'BETA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Ashhad ', chestNo: 'A', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
 
             ]
         },
+
+               {
+            id: 101,
+            title: 'Qira-at ',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Swabeeh', chestNo: 'L', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Abdul Qader', chestNo: 'T', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Swafwan Mt', chestNo: 'S', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+
 
 
     
