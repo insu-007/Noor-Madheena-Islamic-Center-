@@ -138,7 +138,31 @@
                 { place: '3rd', name: 'Muhammed Insaf', chestNo: 'D', team: 'ALPHA', grade: 'A'},
             ]
         },
-        
+
+
+        {
+            id: 101,
+            title: 'Prabandham',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Abdulla Jazeel  ', chestNo: 'B', team: 'BEAT', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Insaf ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Salim', chestNo: 'C', team: 'BEAT', grade: 'A'},
+            ]
+        },
+
+         {
+            id: 101,
+            title: 'Prabandham',
+            category: 'Juniors',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ajmal  ', chestNo: 'J', team: 'BEAT', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Bilal ', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Answab', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+            ]
+        }
     ];
     
     const onStagePrograms = [
