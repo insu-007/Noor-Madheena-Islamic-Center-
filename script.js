@@ -402,6 +402,33 @@
 
             ]
         },
+
+
+               {
+            id: 101,
+            title: 'Quthuba',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
+
+               {
+            id: 101,
+            title: 'Quiz',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
     
     ];
     
