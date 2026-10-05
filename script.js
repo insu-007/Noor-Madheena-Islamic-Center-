@@ -43,8 +43,8 @@
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 161, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 74, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 162, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 82, badge: 'rank-2' },
     ];
 
 
@@ -174,6 +174,19 @@
                 { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Swafwan ', chestNo: 'R', team: 'ALPHA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Sabith Aa', chestNo: 'Q', team: 'BETA', grade: 'A'},
+            ]
+        },
+
+               {
+            id: 101,
+            title: 'Drawing',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Answab', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Abdul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Sabith Aa', chestNo: 'Q', team: 'BETA', grade: 'A'},
+
             ]
         },
     ];
@@ -349,9 +362,46 @@
             ]
         },
 
+               {
+            id: 101,
+            title: 'Qira-at. ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Abdulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
+
+               {
+            id: 101,
+            title: 'Group Song',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Swabeeh & Swafwan', chestNo: 'L & R', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Sabith & Muhammed Mishab & Muhammed Sabith Aa', chestNo: 'K & X & Q', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Answab & Abrar', chestNo: 'M & V', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
 
 
 
+               {
+            id: 101,
+            title: 'News Reading',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Abdul Sabith', chestNo: 'K', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Bilal', chestNo: 'P', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
     
     ];
     
