@@ -443,7 +443,7 @@
             titleEl.style.margin = '0 0 14px 0';
             titleEl.style.fontSize = '15px';
             titleEl.style.color = '#9E0012';
-            titleEl.textContent = 'FEST DAY PROGRAM SCHEDULE';
+            titleEl.textContent = 'FEST DAY 2 PROGRAM SCHEDULE';
             modalBody.appendChild(titleEl);
 
             scheduleData.forEach(item => {
