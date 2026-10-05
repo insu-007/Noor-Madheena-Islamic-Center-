@@ -281,6 +281,19 @@
             ]
         },
 
+               {
+            id: 101,
+            title: 'Dars Class ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Mubashir Kk', chestNo: 'F', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashhad ', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
 
     
     ];
