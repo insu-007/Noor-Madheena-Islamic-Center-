@@ -43,8 +43,8 @@
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 99, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 46, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 112, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 51, badge: 'rank-2' },
     ];
 
 
