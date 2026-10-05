@@ -213,7 +213,7 @@
             winners: [
                 { place: '1st', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Insaf ', chestNo: 'D', team: 'ALPHA', grade: 'A'},
-                { place: '3rd', name: 'Abdhulla Mubashir', chestNo: 'F', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Mubashir', chestNo: 'F', team: 'BETA', grade: 'A'},
 
             ]
         },
@@ -254,6 +254,33 @@
 
             ]
         },
+
+               {
+            id: 101,
+            title: 'Hifl ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Insaf', chestNo: 'D', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Siraj ', chestNo: 'I', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+               {
+            id: 101,
+            title: 'Maashira ',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Ashhad ', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Abdhulla Jazeel', chestNo: 'B', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
 
     
     ];
