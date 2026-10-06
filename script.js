@@ -43,8 +43,8 @@
     // --- Mock Database for Arts Fest 2026 ---
 
     const teamsData = [
-        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 172, badge: 'rank-1' },
-        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 90, badge: 'rank-2' },
+        { rank: 1, name: 'ALPHA', category: 'Leader : Muhammed Insaf', points: 181, badge: 'rank-1' },
+        { rank: 2, name: 'BETA', category: 'Leader : Abdhula Jazeell', points: 106, badge: 'rank-2' },
     ];
 
 
@@ -122,7 +122,7 @@
             status: 'Uploaded',
             winners: [
                 { place: '1st', name: 'Muhammed Answab  ', chestNo: 'M', team: 'ALPHA', grade: 'A'},
-                { place: '2nd', name: 'Chand Babu ', chestNo: 'Y', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Babu Up ', chestNo: 'Y', team: 'BETA', grade: 'A'},
                 { place: '3rd', name: 'Abdhul Haseeb', chestNo: 'N', team: 'ALPHA', grade: 'A'},
             ]
         },
@@ -426,6 +426,46 @@
                 { place: '1st', name: 'Muhammed Ashmal', chestNo: 'E', team: 'ALPHA', grade: 'A'},
                 { place: '2nd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
                 { place: '3rd', name: 'Muhammed Ashhad', chestNo: 'A', team: 'ALPHA', grade: 'A'},
+
+            ]
+        },
+
+
+               {
+            id: 101,
+            title: 'Quiz',
+            category: 'Junior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Answab', chestNo: 'M', team: 'ALPHA', grade: 'A'},
+                { place: '2nd', name: 'Babu Up', chestNo: 'C', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Ajmal', chestNo: 'J', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+               {
+            id: 101,
+            title: 'Musha-ara',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Mubashir', chestNo: 'H', team: 'ALPHA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Siraj', chestNo: 'I', team: 'BETA', grade: 'A'},
+
+            ]
+        },
+
+                {
+            id: 101,
+            title: 'Translation',
+            category: 'Senior',
+            status: 'Uploaded',
+            winners: [
+                { place: '1st', name: 'Muhammed Shaheer', chestNo: 'G', team: 'BETA', grade: 'A'},
+                { place: '2nd', name: 'Muhammed Salim', chestNo: 'C', team: 'BETA', grade: 'A'},
+                { place: '3rd', name: 'Muhammed Insaf', chestNo: 'D', team: 'ALPHA', grade: 'A'},
 
             ]
         },
