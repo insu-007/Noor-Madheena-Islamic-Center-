@@ -433,11 +433,8 @@
     ];
     
     const scheduleData = [
-        { time: '07:00 AM  07:40 AM ', event: 'Dars Class (seniors)', stage: 'stage 2' },
-        { time: '07:40 AM  08:30 AM', event: 'Prabandham (seniors', stage: 'stage 3' },
-        { time: '07:40 AM  08:30 AM', event: 'Prabandham (juniors)', stage: 'stage 2' },
-        { time: '08:30 AM  09:15 AM', event: 'Drawing (juniors)', stage: 'stage 3' },
-        { time: '08:30 AM  09:15 AM', event: 'Translation (seniors)', stage: 'stage 2' },
+        { time: '', event: '//All fest programs have ended//', stage: '' }
+
 
 
     
